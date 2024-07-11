@@ -1,5 +1,7 @@
-
-$primary: blue;
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "./variables";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 body {
   color: red;
