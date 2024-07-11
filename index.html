@@ -9,27 +9,59 @@
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
 <body>
-  <header>
-
-  </header>
-  <input type="text">
-  <h1>Keyboard</h1>
-  <span>/'ki:bc:d/</span>
-  noun
-  Meaning
-  (etc.)A set of keys used to operate a typewriter, computer etc.
-  A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.
-  A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.
-
-  Synonyms
-  electronic keyboard
-
-  verb
-  meaning
-  to type on a computer keyboard.
-  "Keyboarding is the part of this job I hate the most."
-
-  Source https://en.wikitionary.org/wiki/keyboard
+  <div class="container">
+    <header>
+      <div><img src="./assets/images/logo.svg" alt="logo"></div>
+      <div class="switchers">
+        <div>dropdown</div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault"><img src="./assets/images/icon-moon.svg" alt="theme-toggle"></label>
+        </div>
+      </div>
+    </header>
+    <div class="input-container">
+      <input type="text">
+      <div class="icon-search-container"><img src="./assets/images/icon-search.svg" alt="icon-search"></div>
+    </div>
+    <main class="mt-5">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h1>keyboard</h1>
+          <span class="text-primary">/'ki:bc:d/</span>
+        </div>
+        <div class="icon-play-container"><img src="./assets/images/icon-play.svg" alt=""></div>
+      </div>
+      <div class="definition-block">
+          <h2>noun</h2><hr>
+        <div class="meaning">
+          <h3>Meaning</h3>
+          <ul>
+            <li>(etc.)A set of keys used to operate a typewriter, computer etc.</li>
+            <li>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
+            <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
+          </ul>
+        </div>
+        <h3 class="d-inline">Synonyms</h3>
+        <span class="text-primary">electronic keyboard</span>
+      </div>
+      <div class="definition-block">
+        <h2>verb</h2><hr>
+        <div class="meaning">
+          <h3>Meaning</h3>
+          <ul>
+            <li> to type on a computer keyboard.
+              <p>"Keyboarding is the part of this job I hate the most."</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <hr>
+        <span>Source</span><a href="https://en.wikitionary.org/wiki/keyboard">https://en.wikitionary.org/wiki/keyboard</a>
+      </div>
+    </main>
+  </div>
 
 </body>
 </html>
