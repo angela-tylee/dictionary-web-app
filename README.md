@@ -1,5 +1,5 @@
 
-# Project Title
+# Dictionary Web App
   
 ## Table of contents
 
