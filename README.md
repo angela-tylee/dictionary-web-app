@@ -1,22 +1,22 @@
 
-# Project Title
+# Dictionary Web App
   
 ## Table of contents
 
-- [Project Title](#project-title)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-  - [My Process](#my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My Process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
 ## Overview
 
 ### Screenshot
-  
+
+![preview](https://github.com/user-attachments/assets/ae8dedba-4248-48c9-9f07-fe932f9551fe)
+
 ### Links
 
 - Solution URL: https://github.com/angela-tylee/dictionary-web-app
