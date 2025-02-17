@@ -311,13 +311,6 @@ $dark:          $gray-900 !default;
 // custom-start
 $primary: #A445ED;
 $danger: #FF5252;
-$black-20: #050505;
-$black-120: #1F1F1F;
-$black-180: #2D2D2D;
-$black-230: #3A3A3A;
-$gray-510: #757575;
-$gray-910: #E9E9E9;
-$gray-960: #F4F4F4;
 $white: #FFFFFF;
 // custom-end
 
@@ -330,7 +323,7 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -448,11 +441,14 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
+// $body-color:                $gray-900 !default;
+$body-color:                #2D2D2D;
 $body-bg:                   $white !default;
 
-$body-secondary-color:      rgba($body-color, .75) !default;
-$body-secondary-bg:         $gray-200 !default;
+// $body-secondary-color:      rgba($body-color, .75) !default;
+// $body-secondary-bg:         $gray-200 !default;
+$body-secondary-color:      #757575;
+$body-secondary-bg:         #F4F4F4;
 
 $body-tertiary-color:       rgba($body-color, .5) !default;
 $body-tertiary-bg:          $gray-100 !default;

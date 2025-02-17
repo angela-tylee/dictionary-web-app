@@ -1,17 +1,26 @@
 {
   "name": "dictionary-web-app-master",
+  "private": true,
   "version": "1.0.0",
   "description": "![Design preview for the Dictionary web app coding challenge](./preview.jpg)",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "sass": "^1.77.6"
+    "ejs": "^3.1.9",
+    "vite": "^6.0.11",
+    "vite-plugin-ejs": "^1.6.4"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
+    "glob": "^10.2.2",
+    "sass": "^1.61.0",
+    "sass-loader": "^13.2.2",
     "bootstrap": "^5.3.3"
   }
 }
+

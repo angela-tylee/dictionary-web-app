@@ -1,0 +1,23 @@
+// body-color: #2D2D2D v
+// body-color: #FFFFFF
+
+// body-bg: #FFFFFF v
+// body-bg: #050505
+
+// bg-secondary: #F4F4F4 v
+// bg-secondary: #1F1F1F
+
+// text-secondary / toggle-off: #757575 // gray v
+// text-secondary / toggle-off: ~
+
+:root[data-bs-theme="dark"] {
+  --bs-body-color: #ffffff;
+  --bs-body-color-rgb: 255, 255, 255;
+
+  --bs-body-bg: #050505;
+  --bs-body-bg-rgb: 5, 5, 5;
+
+  --bs-secondary-bg: #1f1f1f;
+  --bs-secondary-bg-rgb: 31, 31, 31;
+}
+

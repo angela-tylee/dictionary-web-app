@@ -1,67 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./style/style.scss">
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div><img src="./assets/images/logo.svg" alt="logo"></div>
-      <div class="switchers">
-        <div>dropdown</div>
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-          <label class="form-check-label" for="flexSwitchCheckDefault"><img src="./assets/images/icon-moon.svg" alt="theme-toggle"></label>
-        </div>
-      </div>
-    </header>
-    <div class="input-container">
-      <input type="text">
-      <div class="icon-search-container"><img src="./assets/images/icon-search.svg" alt="icon-search"></div>
-    </div>
-    <main class="mt-5">
-      <div class="d-flex justify-content-between align-items-center">
-        <div>
-          <h1>keyboard</h1>
-          <span class="text-primary">/'ki:bc:d/</span>
-        </div>
-        <div class="icon-play-container"><img src="./assets/images/icon-play.svg" alt=""></div>
-      </div>
-      <div class="definition-block">
-          <h2>noun</h2><hr>
-        <div class="meaning">
-          <h3>Meaning</h3>
-          <ul>
-            <li>(etc.)A set of keys used to operate a typewriter, computer etc.</li>
-            <li>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
-            <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
-          </ul>
-        </div>
-        <h3 class="d-inline">Synonyms</h3>
-        <span class="text-primary">electronic keyboard</span>
-      </div>
-      <div class="definition-block">
-        <h2>verb</h2><hr>
-        <div class="meaning">
-          <h3>Meaning</h3>
-          <ul>
-            <li> to type on a computer keyboard.
-              <p>"Keyboarding is the part of this job I hate the most."</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <hr>
-        <span>Source</span><a href="https://en.wikitionary.org/wiki/keyboard">https://en.wikitionary.org/wiki/keyboard</a>
-      </div>
-    </main>
-  </div>
 
+<body>
+  <div class="container pb-5">
+    <section class="sticky-top bg-body pb-2">
+      <header>
+        <div><img src="./assets/images/logo.svg" alt="logo" width="24px"></div>
+        <div class="switchers">
+          <div class="font-switcher btn-group position-static pe-2 pe-md-4">
+            <button id="font-switcher-btn" class="btn bg-transparent text-body border-0 dropdown-toggle" type="button"
+              data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+              Select font
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" data-font="Inter, sans-serif" style="font-family: 'Inter', sans-serif">Sans
+                  Serif</a></li>
+              <li><a class="dropdown-item" data-font="Lora, serif" style="font-family: 'Lora', serif">Serif</a></li>
+              <li><a class="dropdown-item" data-font="Inconsolata, monospace"
+                  style="font-family: 'Inconsolata', monospace">Mono</a></li>
+            </ul>
+          </div>
+          <div class="theme-switcher form-check form-switch ms-2 ms-md-4">
+            <label class="form-check-label ps-2" for="theme-switcher-input">
+              <input id="theme-switcher-input" class="form-check-input" type="checkbox" role="switch"
+                id="flexSwitchCheckDefault">
+              <img id="theme-icon" src="./assets/images/icon-moon.svg" alt="theme-toggle" width="20px" class="pb-1">
+            </label>
+          </div>
+        </div>
+      </header>
+      <form class="input-container" id="search-form">
+        <input type="text" id="search-input" class="bg-body-secondary">
+        <button type="submit" id="search-btn" class="icon-search-container"><img src="./assets/images/icon-search.svg"
+            alt="icon-search"></button>
+      </form>
+    </section>
+    <div class="text-center pt-5" id="loader" style="display: none">
+      <div class="spinner-border text-body-secondary border-5" style="width: 60px; height: 60px" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <main class="mt-4 mt-md-5 pb-5" id="main"></main>
+    <footer>
+      <div class="attribution text-center text-secondary">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/angela-tylee" target="_blank" rel="noopener noreferrer">angelalee</a>.
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./app.js"></script>
 </body>
+
 </html>
