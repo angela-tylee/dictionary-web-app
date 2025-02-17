@@ -12,7 +12,7 @@
 // TODO: No result page
 // TODO: Initial page
 
-import './style/style.scss';
+// import './style/style.scss';
 
 let data = {};
 
