@@ -4,31 +4,9 @@
 @import './theme';
 @import 'bootstrap';
 
-// @font-face {
-//   font-family: 'Inter';
-//   src: url(../assets/fonts/inter/Inter-VariableFont_slnt\wght.ttf)
-//     format(truetype);
-//   font-weight: normal;
-//   font-size: normal;
-// }
-
-// @font-face {
-//   font-family: 'Lora';
-//   src: url(../assets/fonts/lora/Lora-VariableFont_wght.ttf) format(truetype);
-//   font-weight: normal;
-//   font-size: normal;
-// }
-
-// @font-face {
-//   font-family: 'Inconsolata';
-//   src: url(../assets/fonts/inconsolata/Inconsolata-VariableFont_wdth\wght.ttf)
-//     format(truetype);
-//   font-weight: normal;
-//   font-size: normal;
-// }
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root {
-  // --bs-body-font-family: 'Inter', sans-serif;
   font-size: 80%;
   @media (min-width: 576px) {
     font-size: 100%;
@@ -39,17 +17,10 @@ html, body {
   height: 100%;
 }
 
-html {
-  // font-size: 18px;
-  // TODO: adjust $font-size-root instead?
-}
-
 body {
   height: 100vh;
-  // color: $black-180;
   font-family: 'Inter', sans-serif;
-  font-size: 1.125rem; // 18px
-  // bootstrap font-family?
+  font-size: 18px;
 }
 
 .container {
@@ -68,7 +39,6 @@ a {
 header {
   padding-block: 25px;
   display: flex;
-  // place-items: center between;
   justify-content: space-between;
   align-items: center;
 }
@@ -86,25 +56,18 @@ header option {
 
 header .switchers {
   display: flex;
-  // place-items: center between;
   justify-content: space-between;
   align-items: center;
   .font-switcher {
-    // padding-right: 26px;
     border-right: 1px solid var(--bs-secondary-bg);
     border-radius: 0px;
     .dropdown-menu {
-      // left: -44px;
       width: 100%;
       max-width: 116px;
       &[data-bs-popper] {
         display: block;
-        // left: -44px;
       }
     }
-  }
-  .theme-switcher {
-    // margin-left: 26px;
   }
 }
 
@@ -117,7 +80,6 @@ header .switchers {
     padding: 16px 24px;
     border: 0;
     box-sizing: border-box;
-    // background-color: $gray-960;
     border-radius: 16px;
     &:focus {
       outline: 1px solid $primary;
@@ -172,4 +134,8 @@ header .switchers {
   @media (min-width: 576px) {
     width: 75px;
   }
+}
+
+.pointer {
+  cursor: pointer;
 }

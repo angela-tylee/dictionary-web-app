@@ -22,16 +22,16 @@
               Select font
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" data-font="Inter, sans-serif" style="font-family: 'Inter', sans-serif">Sans
-                  Serif</a></li>
-              <li><a class="dropdown-item" data-font="Lora, serif" style="font-family: 'Lora', serif">Serif</a></li>
-              <li><a class="dropdown-item" data-font="Inconsolata, monospace"
-                  style="font-family: 'Inconsolata', monospace">Mono</a></li>
+              <li class="dropdown-item pointer" data-font="Inter, sans-serif" style="font-family: 'Inter', sans-serif">Sans
+                  Serif</li>
+              <li class="dropdown-item pointer" data-font="Lora, serif" style="font-family: 'Lora', serif">Serif</li>
+              <li class="dropdown-item pointer" data-font="Inconsolata, monospace"
+                  style="font-family: 'Inconsolata', monospace">Mono</li>
             </ul>
           </div>
           <div class="theme-switcher form-check form-switch ms-2 ms-md-4">
             <label class="form-check-label ps-2" for="theme-switcher-input">
-              <input id="theme-switcher-input" class="form-check-input" type="checkbox" role="switch"
+              <input id="theme-switcher-input" class="form-check-input pointer" type="checkbox" role="switch"
                 id="flexSwitchCheckDefault">
               <img id="theme-icon" src="./assets/images/icon-moon.svg" alt="theme-toggle" width="20px" class="pb-1">
             </label>
@@ -44,12 +44,13 @@
             alt="icon-search"></button>
       </form>
     </section>
-    <div class="text-center pt-5" id="loader" style="display: none">
-      <div class="spinner-border text-body-secondary border-5" style="width: 60px; height: 60px" role="status">
-        <span class="visually-hidden">Loading...</span>
+    <main class="mt-4 mt-md-5 pb-5" id="main">
+      <div class="text-center pt-5" id="loader">
+        <div class="spinner-border text-body-secondary border-5" style="width: 60px; height: 60px" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
       </div>
-    </div>
-    <main class="mt-4 mt-md-5 pb-5" id="main"></main>
+    </main>
     <footer>
       <div class="attribution text-center text-secondary">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

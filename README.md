@@ -3,13 +3,15 @@
   
 ## Table of contents
 
-- [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My Process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
+- [Dictionary Web App](#dictionary-web-app)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My Process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
 
 ## Overview
 
@@ -32,10 +34,10 @@
 
 ### What I learned
 
-- Bootstrap background, text secondary class
-- Implement font switcher
-- Audio element
-- Loop nested data of complex API with vanilla JS
+- Loop nested data from API with vanilla JS
+- Implement Font Switcher
+- Manipulate Audio element
+- Bootstrap `bg-body`, `text-body-secondary` classes type
 
 ### Continued development
 

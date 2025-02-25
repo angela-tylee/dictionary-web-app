@@ -1,25 +1,22 @@
-// Dictionary API + fetch API
-
-
-// TODO: synonym, play button / search container / theme toggler: active, hover effect, pointer
-// TODO: font.scss, layout.scss
-// TODO: README + Deploy + clean code
-// FIXME: no synonym UI
-// FIXME: font sans, mono not showing (only shows fallback)
-
-// TODO: dark mode variable + toggle JS
-// TODO: font toggle JS
-// TODO: No result page
-// TODO: Initial page
-
-// import './style/style.scss';
-
 let data = {};
+
+const loader = document.querySelector("#loader");
 
 definition("welcome");
 
+function showLoader() {
+  main.innerHTML = `
+  <div class="text-center pt-5" id="loader">
+    <div class="spinner-border text-body-secondary border-5" style="width: 60px; height: 60px" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>`
+}
+
 async function definition(word) {
-  const loader = document.querySelector("#loader");
+  // loader.style.display = "block"
+  showLoader();
+  console.log(loader.style.display);
   try {
     const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
     data = await res.json();
@@ -65,12 +62,18 @@ function renderData() {
       definitionsHTML += `<li>${definition.definition}</li>`;
     });
 
-    let synonymsAry = [];
-    synonyms.forEach(synonym => {
-      // console.log(synonymsHTML);
-      synonymsAry.push(`<span class="synonym">${synonym}</span>`);
-    })
-    let synonymsHTML = synonymsAry.join(', ')
+    let synonymsHTML = '';
+    if (synonyms.length !== 0) {
+      let synonymsAry = [];
+      synonyms.forEach(synonym => {
+        synonymsAry.push(`<a class="synonym pointer">${synonym}</a>`);
+      })
+      synonymsHTML = `
+        <div class="d-flex">
+          <h3 class="text-body-secondary fs-5 me-2">Synonyms</h3>
+          <div class="text-primary">${synonymsAry.join(', ')}</div>
+        </div>`
+    }
 
     meaningsHTML += `
       <div class="definition-block">
@@ -79,13 +82,11 @@ function renderData() {
           <h3 class="text-body-secondary fs-5">Meaning</h3>
           <ul>${definitionsHTML}</ul>
         </div>
-        <div class="d-flex">
-          <h3 class="text-body-secondary fs-5 me-2">Synonyms</h3>
-          <p class="text-primary">${synonymsHTML || ''}</span>
-        </div>
+        ${synonymsHTML}
       </div>
     `;
   });
+
 
   main.innerHTML = `
     <div class="d-flex justify-content-between align-items-center">
@@ -93,7 +94,7 @@ function renderData() {
         <h1 class="display-3 fw-normal">${word}</h1>
         <span class="text-primary">${phoneticText}</span>
       </div>
-      <button class="icon-play-container btn btn-none border-0" onclick="playAudio()">
+      <button class="icon-play-container btn btn-none border-0" id="playBtn">
         <img class="icon-play" src="./assets/images/icon-play.svg" alt="play audio">
         ${phoneticAudio ? `<audio id="phonetic-audio" controls" src="${phoneticAudio}"></audio>` : ''}
       </button>
@@ -101,7 +102,7 @@ function renderData() {
     ${meaningsHTML}
     <div>
       <hr>
-      <span class="me-2">Source</span><a href="${sourceUrls[0]}">${sourceUrls[0]}</a>
+      <span class="me-2">Source</span><a class="text-break" href="${sourceUrls[0]}">${sourceUrls[0]}</a>
     </div>
   `;
 }
@@ -117,10 +118,16 @@ function notFound() {
 }
 
 function playAudio() {
-  console.log("playaudio");
+  console.log("played");
   const audio = document.querySelector("#phonetic-audio");
   audio.play();
 }
+
+document.querySelector('#main').addEventListener('click', (e) => {
+  if (e.target.classList.contains('icon-play')) {
+    playAudio();
+  }
+});
 
 // click synonyms to call definition(word)
 document.querySelector('#main').addEventListener('click', (e) => {
